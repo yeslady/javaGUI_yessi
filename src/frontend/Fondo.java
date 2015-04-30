@@ -21,7 +21,7 @@ public class Fondo extends JDesktopPane {
     Image image;
     public Fondo() {
         super();
-        image = new ImageIcon(getClass().getResource("/recursos/fondo.jpg")).getImage();
+        image = new ImageIcon(getClass().getResource("/recursos/Fondo1.jpg")).getImage();
         setBackground(new Color(69, 64, 92));
         
     }

@@ -45,6 +45,12 @@ public class FormPersona extends javax.swing.JFrame {
         modelo.addColumn("Telefono");
         TablePersona.setModel(modelo);
     }
+    public void limpiar_texto(){
+        this.TxtAppNombres.setText("");
+        this.TxtDireccion.setText("");
+        this.TxtDni.setText("");
+        this.TxtTelefono.setText("");
+    }
     public void cargar_datos()
     {
         tbPersona = clsp.reportePersona();
@@ -201,12 +207,14 @@ public class FormPersona extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
-        // TODO add your handling code here:
+        limpiar_texto();
     }//GEN-LAST:event_BtnCancelarActionPerformed
 
     private void BtnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNuevoActionPerformed
-        //clsp.cont=-1;
-        //TxtAppNombres.setText(clsp.contador()+"");
+        //TxtAppNombres.getText();
+        llenarTabla();
+        limpiar_texto();
+        cargar_cab();
     }//GEN-LAST:event_BtnNuevoActionPerformed
 
     /**
